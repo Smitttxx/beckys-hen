@@ -12,12 +12,12 @@ interface Passenger {
 const PASSENGERS: Passenger[] = [
   { name: 'Becky',   role: 'The Plane ✈️',   type: 'bride' },
   { name: 'Natalie', role: 'Pilot',           type: 'pilot' },
+  { name: 'Jackie',  role: 'Air Hostess',     type: 'crew'  },
+  { name: 'Emily',   role: 'Air Hostess',     type: 'crew'  },
+  { name: 'Nikki',   role: 'Air Hostess',     type: 'crew'  },
   { name: 'Laura',   role: 'Air Hostess',     type: 'crew'  },
   { name: 'Ellie',   role: 'Air Hostess',     type: 'crew'  },
   { name: 'Becca',   role: 'Air Hostess',     type: 'crew'  },
-  { name: 'Emily',   role: 'Air Hostess',     type: 'crew'  },
-  { name: 'Nicky',   role: 'Air Hostess',     type: 'crew'  },
-  { name: 'Jackie',  role: 'Air Hostess',     type: 'crew'  },
   { name: 'Carol',   role: 'Air Hostess',     type: 'crew'  },
 ]
 

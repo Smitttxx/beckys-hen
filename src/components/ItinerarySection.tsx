@@ -17,7 +17,7 @@ const DAYS: DayAccordionProps[] = [
           "Joe drops Laura, Becca & Ellie first \u2014 they head through security.",
           "Joe returns to collect Natalie.",
           "Becky is last \u2014 stay home until Laura texts \"group is ready at the airport\" \ud83d\udcf1",
-          "Carol, Nicky & Emily make their own way. Latest pre-security arrival: 12:25.",
+          "Carol, Nikki & Emily make their own way. Latest pre-security arrival: 12:25.",
         ],
         tip: "Becky: resist the urge to sneak in early \u2014 make an entrance! \u2708\ufe0f",
       },

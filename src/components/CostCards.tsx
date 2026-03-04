@@ -21,13 +21,13 @@ export default function CostCards() {
           Activities &amp; Costs
         </h2>
         <p className="section-sub">
-          All prices in GBP. Becky doesn't contribute to activity costs — group splits are divided by 8.
+          All prices in GBP. All activity costs are split ÷ 8 — Becky's share is covered as a gift from the group. 🎁
         </p>
 
         {/* ── GROUP SPLIT ── */}
         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', marginBottom: '0.75rem', marginTop: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
           <FontAwesomeIcon icon={faTag} aria-hidden="true" />
-          Group Split — cost shared equally across 8 (Becky's covered!)
+          Group Split — ÷ 8 (Becky's share is our gift to her!)
         </h3>
 
         <div className="cost-grid" style={{ marginBottom: '1.75rem' }}>
@@ -51,7 +51,7 @@ export default function CostCards() {
                 Total charter: <strong>£560</strong><br />
                 Shared party bus from Alicante Airport direct to Marina Benidorm.<br />
                 Transfer time: ~40 mins.<br /><br />
-                Becky rides free — her share covered by the group.
+                Becky rides free — her share is our gift to her. 🎁
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function CostCards() {
                 <strong>Frontline Fiesta @ Oasis Beach</strong><br />
                 Sunday 29 March, 14:00–18:00.<br />
                 Includes: free bar (beer, sangria, soft drinks) + lunch.<br /><br />
-                All 8 attending: <strong>£360 total</strong> (Becky included — group covers her!)
+                All 8 attending: <strong>£360 total</strong> (Becky's share is our gift to her 🎁)
               </div>
               <div className="cost-note">
                 <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
@@ -104,7 +104,7 @@ export default function CostCards() {
                 Includes: 3 courses + a shot + 1 bottle of wine or lambrusco
                 <em> (or 4 pints per 2 people)</em>.<br />
                 Beachfront setting.<br /><br />
-                All 8 attending: <strong>£320 total</strong> (Becky included — group covers her!)
+                All 8 attending: <strong>£320 total</strong> (Becky's share is our gift to her 🎁)
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function CostCards() {
                 <strong>Let's Get Tipsy</strong> · ⭐ 4.8/5 · Top rated<br />
                 5 hours · 4 venues (2 bars + 2 nightclubs) · VIP entry — skip every queue.<br />
                 Includes: free shots, beer pong, flip cup, karaoke, rodeo bull, DJs.<br /><br />
-                All 8 attending: <strong>£208 total</strong> (Becky included — group covers her!)
+                All 8 attending: <strong>£208 total</strong> (Becky's share is our gift to her 🎁)
               </div>
               <div className="cost-note">
                 <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
@@ -156,7 +156,7 @@ export default function CostCards() {
                 Monday morning — the perfect gentle send-off.<br />
                 Includes: 90 min spa facilities + buffet lunch + unlimited drinks.<br />
                 Approx. 3 hours total · max 20 guests at a time.<br /><br />
-                All 8 attending: <strong>£320 total</strong> (Becky included — group covers her!)
+                All 8 attending: <strong>£320 total</strong> (Becky's share is our gift to her 🎁)
               </div>
               <div className="cost-note">
                 <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />

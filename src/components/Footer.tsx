@@ -1,7 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlane, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const CREW = ['Becky ✈️', 'Natalie', 'Laura', 'Ellie', 'Becca', 'Emily', 'Nicky', 'Jackie', 'Carol']
+const CREW = [
+  'Becky ✈️',
+  'Natalie',
+  'Jackie',
+  'Emily',
+  'Nikki',
+  'Laura',
+  'Ellie',
+  'Becca',
+  'Carol'
+]
 
 export default function Footer() {
   return (
