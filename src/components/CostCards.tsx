@@ -12,6 +12,45 @@ import {
   faMartiniGlass,
 } from '@fortawesome/free-solid-svg-icons'
 
+/* ── helper: attendance breakdown table ─────────────────────── */
+interface AttendRow { hens: number; total: number; eachPays: string }
+
+function AttendanceTable({ rows, note }: { rows: AttendRow[]; note?: string }) {
+  return (
+    <div style={{ marginTop: '0.75rem' }}>
+      <div style={{ fontSize: '0.68rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
+        Cost per paying hen (inc. Becky's ticket)
+      </div>
+      <div className="quad-wrap">
+        <table className="quad-table">
+          <thead>
+            <tr>
+              <th>Hens attending</th>
+              <th>Total tickets</th>
+              <th>You each pay</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(r => (
+              <tr key={r.hens}>
+                <td>{r.hens === 8 ? `${r.hens} (all)` : r.hens}</td>
+                <td>{r.hens + 1} (inc. Becky)</td>
+                <td><strong>{r.eachPays}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {note && (
+        <div className="cost-note" style={{ marginTop: '0.5rem' }}>
+          <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
+          {note}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function CostCards() {
   return (
     <section id="costs" className="section section--alt" aria-labelledby="costs-title">
@@ -21,13 +60,13 @@ export default function CostCards() {
           Activities &amp; Costs
         </h2>
         <p className="section-sub">
-          All prices in GBP. All activity costs are split ÷ 8 — Becky's share is covered as a gift from the group. 🎁
+          All prices GBP. Becky's ticket is always covered as a gift from the group — the fewer hens attend an activity, the slightly more each person pays to cover her share.
         </p>
 
-        {/* ── GROUP SPLIT ── */}
+        {/* ── MANDATORY ── */}
         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', marginBottom: '0.75rem', marginTop: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          <FontAwesomeIcon icon={faTag} aria-hidden="true" />
-          Group Split — ÷ 8 (Becky's share is our gift to her!)
+          <FontAwesomeIcon icon={faBus} aria-hidden="true" />
+          Mandatory — everyone's included
         </h3>
 
         <div className="cost-grid" style={{ marginBottom: '1.75rem' }}>
@@ -37,50 +76,62 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faBus} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Group Split
+                Fixed — all 9 travel
               </div>
               <div className="cost-card__title">Party Bus – Airport to Hotel</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
                 <div className="cost-amount">£70</div>
-                <div className="cost-per">per person (÷ 8)</div>
+                <div className="cost-per">per paying hen (÷ 8)</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                Total charter: <strong>£560</strong><br />
-                Shared party bus from Alicante Airport direct to Marina Benidorm.<br />
-                Transfer time: ~40 mins.<br /><br />
-                Becky rides free — her share is our gift to her. 🎁
+                Total charter: <strong>£560</strong> — all 9 of us on the bus, 8 hens pay.<br />
+                Alicante Airport direct to Marina Benidorm · ~40 mins.<br /><br />
+                <strong>This is the airport transfer — everyone is on it.</strong> Fixed cost, no headcount variation.
+                Becky's share is our gift to her. 🎁
               </div>
             </div>
           </div>
+
+        </div>
+
+        {/* ── OPTIONAL ACTIVITIES ── */}
+        <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          <FontAwesomeIcon icon={faTag} aria-hidden="true" />
+          Optional Activities — cost varies by attendance
+        </h3>
+
+        <div className="cost-grid" style={{ marginBottom: '1.75rem' }}>
 
           {/* Beach Party */}
           <div className="cost-card cost-card--group">
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faChampagneGlasses} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Individual Cost (Per Person)
+                Optional · Sunday 29 Mar
               </div>
-              <div className="cost-card__title">Beach Party – Oasis Beach (Sunday)</div>
+              <div className="cost-card__title">Beach Party – Oasis Beach</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
                 <div className="cost-amount">£45</div>
-                <div className="cost-per">per person</div>
+                <div className="cost-per">venue price per ticket</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                <strong>Frontline Fiesta @ Oasis Beach</strong><br />
-                Sunday 29 March, 14:00–18:00.<br />
-                Includes: free bar (beer, sangria, soft drinks) + lunch.<br /><br />
-                All 8 attending: <strong>£360 total</strong> (Becky's share is our gift to her 🎁)
+                <strong>Frontline Fiesta @ Oasis Beach</strong> · 14:00–18:00<br />
+                Free bar (beer, sangria, soft drinks) + lunch included.
               </div>
-              <div className="cost-note">
-                <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
-                Everyone is expected to attend — it's the big Sunday session!
-              </div>
+              <AttendanceTable
+                rows={[
+                  { hens: 8, total: 9, eachPays: '£50.63' },
+                  { hens: 7, total: 8, eachPays: '£51.43' },
+                  { hens: 6, total: 7, eachPays: '£52.50' },
+                ]}
+                note="Formula: (attending × £45) ÷ paying hens. Becky's ticket always covered."
+              />
             </div>
           </div>
 
@@ -89,23 +140,28 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faUtensils} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Individual Cost (Per Person)
+                Optional · Sunday 29 Mar Eve
               </div>
-              <div className="cost-card__title">Italian Beachfront Dinner (Sunday Eve)</div>
+              <div className="cost-card__title">Italian Beachfront Dinner</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
                 <div className="cost-amount">£40</div>
-                <div className="cost-per">per person</div>
+                <div className="cost-per">venue price per ticket</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                Sunday evening sit-down meal.<br />
-                Includes: 3 courses + a shot + 1 bottle of wine or lambrusco
-                <em> (or 4 pints per 2 people)</em>.<br />
-                Beachfront setting.<br /><br />
-                All 8 attending: <strong>£320 total</strong> (Becky's share is our gift to her 🎁)
+                3 courses + shot + wine/lambrusco <em>(or 4 pints per 2)</em>.<br />
+                Beachfront setting — dressing nicely encouraged.
               </div>
+              <AttendanceTable
+                rows={[
+                  { hens: 8, total: 9, eachPays: '£45.00' },
+                  { hens: 7, total: 8, eachPays: '£45.71' },
+                  { hens: 6, total: 7, eachPays: '£46.67' },
+                ]}
+                note="Formula: (attending × £40) ÷ paying hens. Becky's ticket always covered."
+              />
             </div>
           </div>
 
@@ -114,26 +170,28 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faMartiniGlass} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Individual Cost (Per Person)
+                Optional · Saturday 28 Mar
               </div>
-              <div className="cost-card__title">Benidorm Club Crawl – Saturday Night</div>
+              <div className="cost-card__title">Benidorm Club Crawl – Let's Get Tipsy</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
                 <div className="cost-amount">£26</div>
-                <div className="cost-per">per person</div>
+                <div className="cost-per">venue price per ticket</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                <strong>Let's Get Tipsy</strong> · ⭐ 4.8/5 · Top rated<br />
-                5 hours · 4 venues (2 bars + 2 nightclubs) · VIP entry — skip every queue.<br />
-                Includes: free shots, beer pong, flip cup, karaoke, rodeo bull, DJs.<br /><br />
-                All 8 attending: <strong>£208 total</strong> (Becky's share is our gift to her 🎁)
+                ⭐ 4.8/5 · 5 hours · 4 venues · VIP entry, free shots, rodeo bull, karaoke.<br />
+                Free cancellation up to 24 hrs before.
               </div>
-              <div className="cost-note">
-                <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
-                Free cancellation up to 24 hrs before. No sandals or flip-flops on the night.
-              </div>
+              <AttendanceTable
+                rows={[
+                  { hens: 8, total: 9, eachPays: '£29.25' },
+                  { hens: 7, total: 8, eachPays: '£29.71' },
+                  { hens: 6, total: 7, eachPays: '£30.33' },
+                ]}
+                note="No sandals or flip-flops. Formula: (attending × £26) ÷ paying hens."
+              />
             </div>
           </div>
 
@@ -142,35 +200,38 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faSpa} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Individual Cost (Per Person)
+                Optional · Monday 30 Mar
               </div>
-              <div className="cost-card__title">Hens Spa Day With Buffet (Monday)</div>
+              <div className="cost-card__title">Hens Spa Day With Buffet</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
                 <div className="cost-amount">£40</div>
-                <div className="cost-per">per person</div>
+                <div className="cost-per">venue price per ticket</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                Monday morning — the perfect gentle send-off.<br />
-                Includes: 90 min spa facilities + buffet lunch + unlimited drinks.<br />
-                Approx. 3 hours total · max 20 guests at a time.<br /><br />
-                All 8 attending: <strong>£320 total</strong> (Becky's share is our gift to her 🎁)
+                90 min spa + buffet lunch + unlimited drinks · ~3 hrs total.<br />
+                Max 20 guests · <strong>minimum 6 total attending</strong> (inc. Becky).
               </div>
-              <div className="cost-note">
-                <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
-                Min. 6 guests required — we're well over that!
-              </div>
+              <AttendanceTable
+                rows={[
+                  { hens: 8, total: 9, eachPays: '£45.00' },
+                  { hens: 7, total: 8, eachPays: '£45.71' },
+                  { hens: 6, total: 7, eachPays: '£46.67' },
+                  { hens: 5, total: 6, eachPays: '£48.00' },
+                ]}
+                note="Min. 6 total (5 hens + Becky). Formula: (attending × £40) ÷ paying hens."
+              />
             </div>
           </div>
 
         </div>
 
-        {/* ── INDIVIDUAL ── */}
+        {/* ── INDIVIDUAL ONLY ── */}
         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
           <FontAwesomeIcon icon={faMedal} aria-hidden="true" />
-          Individual Cost — specific people only
+          Specific People Only
         </h3>
 
         <div className="cost-grid" style={{ marginBottom: '1.75rem' }}>
@@ -180,20 +241,20 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faMedal} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Individual – Natalie &amp; Becky Only
+                Natalie &amp; Becky only
               </div>
-              <div className="cost-card__title">Tandem Parasail</div>
+              <div className="cost-card__title">Tandem Parasail 🪂</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
-                <div className="cost-amount">£135</div>
-                <div className="cost-per">total (£67.50 each)</div>
+                <div className="cost-amount">£67.50</div>
+                <div className="cost-per">each (£135 total)</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
-                The Pilot and the Plane take to the skies — together! 🪂<br />
-                <strong>Natalie + Becky only.</strong><br />
-                Tandem parasail experience over the Mediterranean.
+                The Pilot and the Plane take to the skies — together!<br />
+                <strong>Natalie + Becky only.</strong> Tandem parasail over the Mediterranean.<br /><br />
+                Natalie pays her £67.50 · Becky's £67.50 is our gift to her. 🎁
               </div>
             </div>
           </div>
@@ -213,9 +274,9 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faTriangleExclamation} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Estimated – Depends on Vehicle &amp; Duration
+                Estimated · Saturday 28 Mar
               </div>
-              <div className="cost-card__title">Quad / Buggy Adventure (Saturday)</div>
+              <div className="cost-card__title">Quad / Buggy Adventure</div>
             </div>
             <div className="cost-card__body">
 
@@ -228,7 +289,7 @@ export default function CostCards() {
                   </div>
                   <div className="cost-note" style={{ marginTop: 0 }}>
                     <FontAwesomeIcon icon={faCircleInfo} className="cost-note__icon" aria-hidden="true" />
-                    Final cost depends on which vehicle type and duration you choose, and how you pair up.
+                    Price per person depends on vehicle type, duration, and how you pair up. Each vehicle is hired at a flat rate — you split it between riders.
                   </div>
                 </div>
 
