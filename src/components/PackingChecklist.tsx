@@ -53,7 +53,6 @@ const CATEGORIES: ClCategory[] = [
     items: [
       { id: "passport",  label: "Passport (check it's valid!)" },
       { id: "insurance", label: "Travel insurance policy details" },
-      { id: "ghic",      label: "GHIC / EHIC card" },
       { id: "euros",     label: "Euros \u2013 cash for bars, taxis, extras" },
       { id: "charger",   label: "Phone charger + EU plug adapter (Type C/F)" },
       { id: "boarding",  label: "Boarding pass \u2013 EZY3357 (download or print)" },
