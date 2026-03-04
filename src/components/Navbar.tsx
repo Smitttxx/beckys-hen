@@ -3,11 +3,10 @@ import { faPlane } from '@fortawesome/free-solid-svg-icons'
 
 const NAV_LINKS = [
   { href: '#hero',      label: 'Flight' },
-  { href: '#schedule',  label: 'Board' },
+  { href: '#briefing',  label: 'Briefing' },
   { href: '#itinerary', label: 'Itinerary' },
   { href: '#costs',     label: 'Costs' },
   { href: '#checklist', label: 'Packing' },
-  { href: '#briefing',  label: 'Briefing' },
   { href: '#games',     label: 'Games' },
 ]
 
