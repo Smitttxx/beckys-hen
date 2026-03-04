@@ -36,7 +36,8 @@ import {
   faMoon,
   faCamera,
   faShip,
-  faSpa,
+  faBars,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 
 import Navbar from './components/Navbar'
@@ -56,7 +57,7 @@ library.add(
   faTriangleExclamation, faBolt, faDice, faHatCowboy, faCrown,
   faListCheck, faMapPin, faUtensils, faBus, faMedal, faChampagneGlasses,
   faMartiniGlass, faPersonSwimming, faGamepad, faFire, faSun, faMoon,
-  faCamera, faShip, faSpa,
+  faCamera, faShip, faBars, faXmark,
 )
 
 export default function App() {
