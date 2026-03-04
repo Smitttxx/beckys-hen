@@ -21,22 +21,31 @@ const DAYS: DayAccordionProps[] = [
         ],
       },
       {
-        time: "12:25",
-        event: "Full Group \u2013 Pre-Security Meetup",
+        time: "~12:25",
+        event: "Group Arrives Landside \u2013 Starbucks Holdout",
         notes: [
-          "Meet landside \u2014 Liverpool Airport doesn't have much before security (basically just a Starbucks).",
-          "Grab a coffee if you need one, get the photos done, and head through together.",
-          "Becky gets into her Plane Outfit \u2708\ufe0f",
+          "Liverpool Airport is tiny landside \u2014 basically just a Starbucks.",
+          "Grab a coffee, do a quick outfit check, and wait for Becky.",
+          "Carol, Nicky & Emily make their own way \u2014 latest arrival 12:25.",
         ],
-        tip: "Don't linger landside \u2014 the good stuff (Spoons!) is airside.",
       },
       {
-        time: "14:25",
+        time: "~12:45",
+        event: "Becky Arrives \u2013 Straight Through Security!",
+        notes: [
+          "As soon as Becky lands, we move \u2014 no lingering landside.",
+          "Quick group decision: plane outfit on now or once we're through? \u2708\ufe0f",
+          "Get the arrival photos, then head to the security queue together.",
+        ],
+        tip: "Don't hang around \u2014 everything fun is airside!",
+      },
+      {
+        time: "~13:00",
         event: "Through Security \u2013 Head Straight to Wetherspoons",
         notes: [
-          "Aim to be through security by ~14:25.",
           "Find the Wetherspoons airside \u2014 drinks, food, airport games.",
           "Duty free browse, more photos, air hostess energy at full power. \ud83d\udc85",
+          "Plenty of time before the 16:25 gate.",
         ],
       },
       {
