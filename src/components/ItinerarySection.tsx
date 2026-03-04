@@ -19,7 +19,6 @@ const DAYS: DayAccordionProps[] = [
           "Becky is last \u2014 stay home until Laura texts \"group is ready at the airport\" \ud83d\udcf1",
           "Carol, Nikki & Emily make their own way. Latest pre-security arrival: 12:25.",
         ],
-        tip: "Becky: resist the urge to sneak in early \u2014 make an entrance! \u2708\ufe0f",
       },
       {
         time: "12:25",
@@ -228,7 +227,7 @@ const DAYS: DayAccordionProps[] = [
           "\u00a340 per person \u00b7 approx. 3 hours total.",
           "The perfect gentle send-off before the flight home.",
         ],
-        tip: "Minimum 6 guests \u2014 we\u2019ve got that covered easily. Perfect post-hen treat!",
+        tip: "Minimum 6 guests. Perfect post-hen treat!",
       },
       {
         time: "~19:00",
@@ -237,7 +236,6 @@ const DAYS: DayAccordionProps[] = [
           "Allow plenty of time \u2013 no stress on the final day.",
           "Flight is 21:40 \u2013 aim for airport by 19:00.",
         ],
-        tip: "Set a phone alarm for \"leave for airport\" before you go out Sunday night!",
       },
       {
         time: "21:40",

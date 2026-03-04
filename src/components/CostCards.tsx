@@ -284,7 +284,7 @@ export default function CostCards() {
 
                 <div>
                   <div className="cost-main">
-                    <div className="cost-amount cost-amount--gold">£45–93</div>
+                    <div className="cost-amount cost-amount--gold">£65–150</div>
                     <div className="cost-per">estimated per person</div>
                   </div>
                   <div className="cost-note" style={{ marginTop: 0 }}>
