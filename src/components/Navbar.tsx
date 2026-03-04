@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { href: '#hero',      label: 'Flight' },
   { href: '#briefing',  label: 'Briefing' },
   { href: '#itinerary', label: 'Itinerary' },
-  { href: '#schedule',  label: 'Board' },
   { href: '#costs',     label: 'Costs' },
   { href: '#checklist', label: 'Packing' },
   { href: '#games',     label: 'Games' },
