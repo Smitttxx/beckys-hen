@@ -24,18 +24,19 @@ const DAYS: DayAccordionProps[] = [
         time: "12:25",
         event: "Full Group \u2013 Pre-Security Meetup",
         notes: [
-          "Runway photos & videos \u2013 we're on the catwalk!",
-          "Airport games in the departure lounge.",
-          "Drinks at Wetherspoons (Spoons).",
+          "Meet landside \u2014 Liverpool Airport doesn't have much before security (basically just a Starbucks).",
+          "Grab a coffee if you need one, get the photos done, and head through together.",
           "Becky gets into her Plane Outfit \u2708\ufe0f",
         ],
+        tip: "Don't linger landside \u2014 the good stuff (Spoons!) is airside.",
       },
       {
         time: "14:25",
-        event: "Through Security (aim to be through by ~14:25)",
+        event: "Through Security \u2013 Head Straight to Wetherspoons",
         notes: [
-          "Airside drinks, duty free, more photos.",
-          "Air hostess energy at full power \ud83d\udc85",
+          "Aim to be through security by ~14:25.",
+          "Find the Wetherspoons airside \u2014 drinks, food, airport games.",
+          "Duty free browse, more photos, air hostess energy at full power. \ud83d\udc85",
         ],
       },
       {
