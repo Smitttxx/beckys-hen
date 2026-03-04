@@ -7,6 +7,9 @@ export interface TlEvent {
   event: string
   notes?: string[]
   tip?: string
+  cost?: string
+  costNote?: string
+  optional?: boolean
 }
 
 export interface DayAccordionProps {
@@ -68,13 +71,23 @@ export default function DayAccordion({
                 <span className="tl-time">{ev.time}</span>
                 <span className="tl-dot" aria-hidden="true" />
                 <div className="tl-body">
-                  <div className="tl-event">{ev.event}</div>
+                  <div className="tl-event">
+                    {ev.event}
+                    {ev.optional && <span className="tl-optional">Optional</span>}
+                  </div>
                   {ev.notes && ev.notes.length > 0 && (
                     <ul className="tl-notes">
                       {ev.notes.map((note, j) => (
                         <li key={j} className="tl-note">{note}</li>
                       ))}
                     </ul>
+                  )}
+                  {ev.cost && (
+                    <div className="tl-cost">
+                      <span className="tl-cost__label">Cost</span>
+                      <span className="tl-cost__amount">{ev.cost}</span>
+                      {ev.costNote && <span className="tl-cost__note">{ev.costNote}</span>}
+                    </div>
                   )}
                   {ev.tip && <div className="tl-tip">💡 {ev.tip}</div>}
                 </div>

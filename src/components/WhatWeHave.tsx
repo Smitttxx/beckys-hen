@@ -48,11 +48,6 @@ const NEED_ITEMS: BriefItem[] = [
   },
   {
     icon: faHatCowboy,
-    text: "Quad / buggy day kit",
-    sub: "Long trousers (jeans ideal) + closed-toe shoes. Just for the activity \u2013 you'll be back to swimwear after.",
-  },
-  {
-    icon: faHatCowboy,
     text: "Last Rodeo accessories",
     sub: "Cowboy/cowgirl hat, boots, bandana, belt \u2013 whatever western vibes you've got. Pair with the provided t-shirt.",
   },

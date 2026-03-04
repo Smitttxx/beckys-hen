@@ -31,7 +31,7 @@ const DAYS: DayGroup[] = [
     rows: [
       { event: 'LPL \u2192 ALC \u00b7 EZY3357',         time: '16:25',  status: 'boarding', statusLabel: STATUS_LABELS.boarding },
       { event: 'ARRIVE ALICANTE',                         time: '20:10',  status: 'ontime',   statusLabel: STATUS_LABELS.ontime,   sub: true },
-      { event: 'BOARD PARTY BUS \u00b7 ALC AIRPORT',     time: '~20:30', status: 'boarding', statusLabel: STATUS_LABELS.boarding, cost: '\u00a370 PP', sub: true },
+      { event: 'TRANSFER \u00b7 OWN ARRANGEMENTS',       time: '~20:30', status: 'ontime',   statusLabel: STATUS_LABELS.ontime,   sub: true },
       { event: 'CHECK-IN \u00b7 MARINA BENIDORM',        time: '~21:00', status: 'ontime',   statusLabel: STATUS_LABELS.ontime,   sub: true },
       { event: 'STRIP BAR CRAWL + SCAVENGER HUNT',       time: 'LATE',   status: 'boarding', statusLabel: STATUS_LABELS.boarding, sub: true },
     ],
@@ -47,10 +47,9 @@ const DAYS: DayGroup[] = [
   {
     date: 'SAT 28 MAR',
     rows: [
-      { event: 'QUAD / BUGGY ADVENTURE',                 time: '10:00+', status: 'boarding', statusLabel: STATUS_LABELS.boarding, cost: '\u00a3VARIES' },
-      { event: '"MY LAST RODEO" THEME CHANGE',           time: 'EVE',    status: 'getready', statusLabel: STATUS_LABELS.getready, sub: true },
-      { event: 'DWARF HANDCUFF CHALLENGE',               time: '~21:00', status: 'boarding', statusLabel: STATUS_LABELS.boarding, sub: true },
-      { event: 'CLUB CRAWL \u00b7 LET\u2019S GET TIPSY', time: '22:00',  status: 'boarding', statusLabel: STATUS_LABELS.boarding, cost: '\u00a326 PP', sub: true },
+      { event: 'SHOPPING ON THE STRIP',                  time: 'DAY',    status: 'getready', statusLabel: STATUS_LABELS.getready },
+      { event: '"MY LAST RODEO" \u2013 GET READY',       time: 'EVE',    status: 'getready', statusLabel: STATUS_LABELS.getready, sub: true },
+      { event: 'CLUB CRAWL \u00b7 LET\u2019S GET TIPSY', time: '22:00',  status: 'optional', statusLabel: STATUS_LABELS.optional, cost: '\u00a326 PP', sub: true },
     ],
   },
   {
@@ -64,7 +63,6 @@ const DAYS: DayGroup[] = [
   {
     date: 'MON 30 MAR',
     rows: [
-      { event: 'HENS SPA DAY WITH BUFFET',              time: 'MORN',  status: 'boarding', statusLabel: STATUS_LABELS.boarding, cost: '\u00a340 PP' },
       { event: 'ALC \u2192 LPL \u00b7 EZY3358',        time: '21:40', status: 'departed', statusLabel: 'GATE OPEN' },
       { event: 'ARRIVE LIVERPOOL',                       time: '23:30', status: 'departed', statusLabel: STATUS_LABELS.departed, sub: true },
     ],

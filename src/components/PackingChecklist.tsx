@@ -37,15 +37,6 @@ const CATEGORIES: ClCategory[] = [
     ],
   },
   {
-    id: "quad",
-    icon: faHatCowboy,
-    title: "Quad / Buggy Day",
-    items: [
-      { id: "jeans",        label: "Long trousers \u2013 jeans preferred" },
-      { id: "closed-shoes", label: "Closed-toe shoes (trainers/flat boots)" },
-    ],
-  },
-  {
     id: "rodeo",
     icon: faHatCowboy,
     title: "My Last Rodeo Night \ud83e\udd20",
