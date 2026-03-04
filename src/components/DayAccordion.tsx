@@ -27,7 +27,7 @@ export default function DayAccordion({
   date,
   summary,
   events,
-  defaultOpen = false,
+  defaultOpen = true,
 }: DayAccordionProps) {
   const [open, setOpen] = useState(defaultOpen)
   const bodyId = `acc-body-${dayShort.toLowerCase()}`
