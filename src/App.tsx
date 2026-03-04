@@ -66,7 +66,7 @@ export default function App() {
       <main>
         <BoardingPassHero />
         <WhatWeHave />
-        <DepartureBoard />
+        {/* <DepartureBoard /> */}
         <ItinerarySection />
         <CostCards />
         <PackingChecklist />

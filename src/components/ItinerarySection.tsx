@@ -11,51 +11,21 @@ const DAYS: DayAccordionProps[] = [
     defaultOpen: true,
     events: [
       {
-        time: "MORN",
-        event: "Morning Prep \u2013 Journeys to Liverpool Airport",
-        notes: [
-          "Joe drops Laura, Becca & Ellie first, then returns for Natalie.",
-          "Carol, Nicky & Emily make their own way.",
-          "Bag drop opens at 14:25 \u2014 aim to arrive ~14:05 so we're ready and waiting.",
-          "Becky is last \u2014 she arrives at ~14:15 (we text her when we're all there \ud83d\udcf1).",
-        ],
-      },
-      {
         time: "~14:05",
-        event: "Full Group Arrives Landside (minus Becky)",
+        event: "Everyone Arrives Liverpool Airport (minus Becky)",
         notes: [
-          "Liverpool Airport is tiny landside \u2014 basically just a Starbucks.",
-          "Grab a quick coffee, get outfits on, get into formation.",
-          "Bag drop doesn\u2019t open until 14:25 so we\u2019re not waiting long.",
+          "Joe drops Laura, Becca & Ellie, then Natalie. Carol, Nicky & Emily make their own way.",
+          "Landside is tiny \u2014 grab a Starbucks, get outfits on, get into formation.",
+          "Text Becky once everyone\u2019s there \ud83d\udcf1",
         ],
       },
       {
         time: "~14:15",
-        event: "Becky Arrives \u2708\ufe0f \u2013 Hand Out The Goods!",
+        event: "Becky Arrives \u2708\ufe0f \u2013 Kit Out & Queue Up",
         notes: [
-          "Becky makes her entrance \u2014 we\u2019re all ready and waiting!",
-          "Hand out hats, lanyards, badges \u2014 get everyone kitted up.",
-          "Help Becky into her plane outfit if she wants to wear it now.",
-          "Photos, chaos, the holiday officially starts.",
-        ],
-        tip: "Bag drop opens in 10 mins \u2014 just enough time to get sorted!",
-      },
-      {
-        time: "14:25",
-        event: "Bag Drop Opens \u2013 Queue As A Group",
-        notes: [
-          "EasyJet bag drop opens exactly 2 hours before the 16:25 flight.",
-          "Closes at 15:45 \u2014 we\u2019re first in the queue so no stress.",
-          "Bags away, then straight through security together.",
-        ],
-      },
-      {
-        time: "~14:45",
-        event: "Through Security \u2013 Head Straight to Wetherspoons",
-        notes: [
-          "Find the Wetherspoons airside \u2014 drinks, food, airport games.",
-          "Duty free browse, more photos, air hostess energy at full power. \ud83d\udc85",
-          "If Becky hasn\u2019t put the plane outfit on yet, now\u2019s the time! \u2708\ufe0f",
+          "Hand out hats, lanyards & badges. Plane outfit on if she wants it now.",
+          "Bag drop opens at 14:25 \u2014 straight to the queue as a group.",
+          "Bags away, through security, Wetherspoons airside. Holiday starts here.",
         ],
       },
       {
