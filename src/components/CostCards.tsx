@@ -231,7 +231,7 @@ export default function CostCards() {
         {/* ── INDIVIDUAL ONLY ── */}
         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
           <FontAwesomeIcon icon={faMedal} aria-hidden="true" />
-          Specific People Only
+          Group Gift — whole group splits the cost
         </h3>
 
         <div className="cost-grid" style={{ marginBottom: '1.75rem' }}>
@@ -241,20 +241,20 @@ export default function CostCards() {
             <div className="cost-card__head">
               <div className="cost-card__type">
                 <FontAwesomeIcon icon={faMedal} style={{ marginRight: '0.3rem' }} aria-hidden="true" />
-                Natalie &amp; Becky only
+                Group gift — split by 8
               </div>
               <div className="cost-card__title">Tandem Parasail 🪂</div>
             </div>
             <div className="cost-card__body">
               <div className="cost-main">
-                <div className="cost-amount">£67.50</div>
-                <div className="cost-per">each (£135 total)</div>
+                <div className="cost-amount">£16.88</div>
+                <div className="cost-per">per hen (÷ 8)</div>
               </div>
               <hr className="cost-divider" />
               <div className="cost-detail">
                 The Pilot and the Plane take to the skies — together!<br />
-                <strong>Natalie + Becky only.</strong> Tandem parasail over the Mediterranean.<br /><br />
-                Natalie pays her £67.50 · Becky's £67.50 is our gift to her. 🎁
+                <strong>Natalie + Becky only</strong> go up · the whole group covers the cost.<br /><br />
+                Total: <strong>£135</strong> ÷ 8 = £16.88 each. Becky's share is our gift to her. 🎁
               </div>
             </div>
           </div>
